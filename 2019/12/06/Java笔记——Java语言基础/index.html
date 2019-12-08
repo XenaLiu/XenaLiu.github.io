@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -68,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Java,笔记," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -79,18 +86,24 @@
 
 
 
-<meta name="description" content="Java语言基本组成关键字">
-<meta name="keywords" content="Java,笔记">
+<meta name="description" content="Keywords：关键字、标识符、注释、常量和变量、运算符、语句、 函数、数组">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java笔记——Java语言基础">
 <meta property="og:url" content="http:&#x2F;&#x2F;xenaliu.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;Java%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80&#x2F;index.html">
 <meta property="og:site_name" content="Xena&#39;s Blog">
-<meta property="og:description" content="Java语言基本组成关键字">
+<meta property="og:description" content="Keywords：关键字、标识符、注释、常量和变量、运算符、语句、 函数、数组">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206133408.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206135224.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206151118.png">
-<meta property="og:updated_time" content="2019-12-06T07:15:56.439Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206170129.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206170227.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206170604.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206170654.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191208153448.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191208155713.png">
+<meta property="og:updated_time" content="2019-12-08T09:25:37.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;20191206133408.png">
 
@@ -355,9 +368,12 @@
       
 
       
-        <h1 id="Java语言基本组成"><a href="#Java语言基本组成" class="headerlink" title="Java语言基本组成"></a>Java语言基本组成</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191206133408.png" alt="Java中的关键字"></p>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>在程序中定义的一些名称<br>由26个英文字母大小写、数字、0-9符号、_、$组成<br>定义合法标识符规则：</p>
+        <p><strong>Keywords：</strong>关键字、标识符、注释、常量和变量、运算符、语句、 函数、数组</p>
+<a id="more"></a>
+
+<h1 id="Java语言基本组成"><a href="#Java语言基本组成" class="headerlink" title="Java语言基本组成"></a>Java语言基本组成</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191206133408.png" alt="Java中的关键字"></p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>在程序中定义的一些名称,由26个英文字母大小写、数字、0-9符号、_、$组成。</p>
+<p><strong>定义合法标识符规则：</strong></p>
 <ol>
 <li>数字不可以开头</li>
 <li>不可以使用关键字<br>Java中严格区分大小写<br>注意：在取名时，为了提高阅读性，要尽量有意义</li>
@@ -410,9 +426,115 @@
 <ol>
 <li>如果对负数取模，可以把模数负号忽略不记，如：<code>5%-2=1</code>，但被模数是负数就另当别论。</li>
 <li>对于除号“/”，它的整数除和小数除是有区别的：整数之间做除法时，只保留整数部分而舍弃小数部分。如：<code>int x=3510;x=x/1000*1000;</code> x的结果是<code>3000</code>。</li>
-<li>“+”除字符串相加功能外，还能把非字符串转换成字符串，如：<code>System.out.println(&quot;5+5=&quot;+5+5);</code>打印结果是`</li>
+<li>字符串数据和任何数据使用’+’相连接，最终都会变成字符串，如：<code>System.out.println(&quot;5+5=&quot;+5+5);</code>打印结果是<code>5+5=55</code></li>
 </ol>
-<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h4><h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2>
+<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>通过<code>\</code>来转变后面字母或者符号的意义<br><code>\n</code>：换行<br><code>\b</code>：退格。相当于backspace<br><code>\r</code>：回车。windows系统中，回车符是由连个字符来表示<code>\r\n</code><br><code>\t</code>：制表符，相当于tab键</p>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><p><code>=，+=，-=，*=，/=，%=</code><br>一个栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> s = <span class="number">3</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">s = s + <span class="number">4</span>; <span class="comment">//编译失败，s+4时自动提升为int类型（4个字符），而s依然为short类型（2个字符）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">s+=<span class="number">4</span>; <span class="comment">//编译通过，会做自动转换</span></span></pre></td></tr></table></figure>
+
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191206170129.png" alt=""><br>注：比较运算符的结果都是boolean型，也就是要么是true，要么是false。</p>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191206170227.png" alt=""></p>
+<p><strong>“&amp;”和“&amp;&amp;”的区别：</strong></p>
+<ul>
+<li>单&amp;时，左边无论真假，右边都进行运算；</li>
+<li>双&amp;时，如果左边为真，右边参与运算，如果左边为假，那么右边不参与运算。</li>
+<li>“|”和“||”的区别同理，双或时，左边为真，右边不参与运算。</li>
+</ul>
+<h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191206170604.png" alt=""><br>位运算是直接对二进制进行运算<br><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191206170654.png" alt=""></p>
+<h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h4><p>格式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">(条件表达式)?表达式<span class="number">1</span>：表达式<span class="number">2</span>；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">如果条件为<span class="keyword">true</span>，运算后的结果是表达式<span class="number">1</span>；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">如果条件为<span class="keyword">false</span>，运算后的结果是表达式<span class="number">2</span>；</span></pre></td></tr></table></figure>
+<p>栗子：获取两个数中大的数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x=<span class="number">3</span>,y=<span class="number">4</span>,z;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">z = (x&gt;y)?x:y;<span class="comment">//z变量存储的就是两个数的大数。</span></span></pre></td></tr></table></figure>
+
+<h2 id="语句：程序流程控制"><a href="#语句：程序流程控制" class="headerlink" title="语句：程序流程控制"></a>语句：程序流程控制</h2><h4 id="判断结构：-if语句"><a href="#判断结构：-if语句" class="headerlink" title="判断结构： if语句"></a>判断结构： if语句</h4><p>三种格式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (条件表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">……</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>if 语句的特点：<br>a. 每一种格式都是单条语句。<br>b. 第二种格式与三元运算符的区别：三元运算符运算完要有值出现。三元运算符的好处是可以写在其他表达式中。<br>c. 条件表达式无论写成什么样子，只看最终的结构是否是true 或者false;</p>
+<h4 id="选择结构：switch-语句"><a href="#选择结构：switch-语句" class="headerlink" title="选择结构：switch 语句"></a>选择结构：switch 语句</h4><p>格式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">case</span> 取值<span class="number">1</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">break</span>；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">case</span> 取值<span class="number">2</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">break</span>；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    …...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">default</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">break</span>；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>switch语句特点：<br>a,switch语句选择的类型（case取值）只有四种：byte，short，int ，char。<br>b,case之间与default没有顺序。先执行第一个case，没有匹配的case执行default。<br>c,结束switch语句的两种情况：遇到break，执行到switch语句结束。<br>d,如果匹配的case或者default没有对应的break，那么程序会继续向下执行，运行可以执行的语句，直到遇到break或者switch结尾结束。</p>
+<h4 id="循环结构：while，do-while，for语句"><a href="#循环结构：while，do-while，for语句" class="headerlink" title="循环结构：while，do while，for语句"></a>循环结构：while，do while，for语句</h4><ol>
+<li>while语句格式：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(条件表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>do while语句格式：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;<span class="keyword">while</span>(条件表达式);</span></pre></td></tr></table></figure>
+<p>do while特点是条件无论是否满足，循环体至少被执行一次。</p>
+<ol start="3">
+<li>for语句格式：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化表达式；循环条件表达式；循环后的操作表达式)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    执行语句；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>注：<br>a,for里面的表达式运行的顺序，初始化表达式只读一次，判断循环条件，为真就执行循环体，然后再执行循环后的操作表达式，接着继续判断循环条件，重复这个过程，直到条件不满足为止。<br>b,while与for可以互换，区别在于for为了循环而定义的变量for循环结束时就在内存中释放。而while循环使用的变量在循环结束后还可以继续使用。<br>c,最简单无限循环格式：while(true) , for(;;),无限循环存在的原因是并不知道循环多少次，而是根据某些条件，来控制循环。</p>
+<h4 id="其他流程控制语句：break（跳出），continue（继续）"><a href="#其他流程控制语句：break（跳出），continue（继续）" class="headerlink" title="其他流程控制语句：break（跳出），continue（继续）"></a>其他流程控制语句：break（跳出），continue（继续）</h4><p>break语句：应用范围：选择结构和循环结构。<br>continue语句：应用于循环结构。</p>
+<p>注：<br>a,这两个语句离开应用范围，存在是没有意义的。<br>b,这个两个语句单独存在时，下面都不可以有语句，因为执行不到。<br>c,continue语句是结束本次循环继续下次循环。<br>d,标号的出现，可以让这两个语句作用于指定的范围。栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//其中w、q为标号</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">W:<span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>; x&lt;<span class="number">3</span>; i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    q:<span class="keyword">for</span>(<span class="keyword">int</span> y=<span class="number">0</span>; y&lt;<span class="number">4</span>, y++&gt;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        System.out.println(x+y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">break</span> w;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h4 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h4><p>函数就是定义在类中的具有特定功能的一段独立小程序。函数也称为方法。</p>
+<p><strong>函数的格式：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">返回值类型：函数运行后的结果的数据类型。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">参数类型：是形式参数的数据类型。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">形式参数：是一个变量，用于存储调用函数时传递给函数的实际参数。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">实际参数：传递给形式参数的具体数值。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">return：用于结束函数。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">返回值：该值会返回给调用者。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 函数名(参数类型 形式参数<span class="number">1</span>，参数类型 形式参数<span class="number">2</span>，)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    执行语句;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> 返回值;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p><strong>函数的特点：</strong></p>
+<ul>
+<li>定义函数可以将功能代码进行封装</li>
+<li>便于对该功能进行复用</li>
+<li>函数只有被调用才会被执行</li>
+<li>函数的出现提高了代码的复用性</li>
+<li>对于函数没有具体返回值的情况，返回值类型用关键字void表示，那么该函数中的return语句如果在最后一行可以省略不写。</li>
+<li>注意：<ul>
+<li>函数中只能调用函数，不可以在函数内部定义函数。</li>
+<li>定义函数时，函数的结果应该返回给调用者，交由调用者处理。</li>
+</ul>
+</li>
+</ul>
+<h4 id="函数的重载"><a href="#函数的重载" class="headerlink" title="函数的重载"></a>函数的重载</h4><p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191208153448.png" alt=""></p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h4 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h4><p><strong>概念：</strong> 同一种类型数据的集合。其实数组就是一个容器<br><strong>数组的好处：</strong> 可以自动给数组中的元素从0开始编号，方便操作这些元素</p>
+<p><strong>格式：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//格式1：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">元素类型[] 数组名 = <span class="keyword">new</span> 元素类型[元素个数或数组长度]；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//格式2：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">元素类型[] 数组名 = <span class="keyword">new</span> 元素类型[]&#123;元素，元素，……&#125;；</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> arr = &#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">7</span>&#125;;</span></pre></td></tr></table></figure>
+
+<h4 id="数组的内存分配及特点"><a href="#数组的内存分配及特点" class="headerlink" title="数组的内存分配及特点"></a>数组的内存分配及特点</h4><p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/20191208155713.png" alt=""><br>数组实体中变量的默认值，与数组类型有关，int型默认<code>0</code>，double型默认<code>0.0</code>，float型默认<code>0.0f</code>，布尔型默认<code>false</code>。</p>
+<h4 id="数组操作常见问题"><a href="#数组操作常见问题" class="headerlink" title="数组操作常见问题"></a>数组操作常见问题</h4><ol>
+<li><p>数组脚标越界异常(ArrayIndexOutOfBoundsException)：访问到了数组中的不存在的脚标时发生。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System.out.println(arr[<span class="number">3</span>]);</span></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">java</span><span class="selector-class">.lang</span><span class="selector-class">.ArrayIndexOutOfBoundsException</span>: 3</span></pre></td></tr></table></figure>
+</li>
+<li><p>空指针异常(NullPointerException)：arr引用没有指向实体，却在操作实体中的元素时发生。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System.out.println(arr[<span class="number">0</span>]);</span></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">java</span><span class="selector-class">.lang</span><span class="selector-class">.NullPointerException</span></span></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="数组的常见操作"><a href="#数组的常见操作" class="headerlink" title="数组的常见操作"></a>数组的常见操作</h4><ol>
+<li><p>数组的遍历(day05\ArrayDemo4.java)</p>
+</li>
+<li><p>获取最值（最大值，最小值）（day05\ArrayDemo4.java）</p>
+</li>
+<li><p>排序（选择排序，冒泡排序）（day05\ArrayDemo4.java）</p>
+</li>
+<li><p>折半查找（二分查找）（day05\ArrayDemo5.java）</p>
+</li>
+<li><p>进制转换（day05\ArrayTest7.java）</p>
+</li>
+</ol>
+<h4 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h4><p>格式1：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">定义名称为arr的二维数组</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">二维数组中有3个一维数组</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">每一个一维数组中有2个元素</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">一维数组的名称分别为arr[0], arr[1], arr[2]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][<span class="number">2</span>]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给第一个一维数组1脚标位赋值为78写法是：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">arr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">78</span>;</span></pre></td></tr></table></figure>
+
+<p>格式2：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">二维数组中有3个一维数组</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">每个一维数组都是默认初始化值null</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以对这个三个一维数组分别进行初始化:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">arr[<span class="number">0</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">arr[<span class="number">1</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">arr[<span class="number">2</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span></pre></td></tr></table></figure>
+
+<p>格式3：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">定义一个名称为arr的二维数组</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">二维数组中的有三个一维数组</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">每一个一维数组中具体元素也都已初始化</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">第一个一维数组arr[0] = &#123;3,8,2&#125;;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">第二个一维数组arr[1] = &#123;2,7&#125;;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">第三个一维数组arr[2] = &#123;9,0,1,6&#125;;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] arr = &#123;&#123;<span class="number">3</span>,<span class="number">8</span>,<span class="number">2</span>&#125;,&#123;<span class="number">2</span>,<span class="number">7</span>&#125;,&#123;<span class="number">9</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">6</span>&#125;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第三个一维数组的长度表示方式：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">arr[<span class="number">2</span>].length;</span></pre></td></tr></table></figure>
+
+<p>注意特殊写法情况：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] x,y[]; <span class="comment">//x是一维数组，y是二维数组。</span></span></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -431,8 +553,6 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
-          
         </div>
       
 
@@ -444,8 +564,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/05/Java%E5%B8%B8%E8%A7%81bug%E9%9B%86%E9%94%A6/" rel="next" title="Java常见bug集锦">
-                <i class="fa fa-chevron-left"></i> Java常见bug集锦
+              <a href="/2019/12/05/Java%E5%B8%B8%E8%A7%81bug%E9%9B%86%E9%94%A6/" rel="next" title="Java笔记——常见bug集锦">
+                <i class="fa fa-chevron-left"></i> Java笔记——常见bug集锦
               </a>
             
           </div>
@@ -453,6 +573,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/08/Java%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" rel="prev" title="Java笔记——内存结构与内存分配">
+                Java笔记——内存结构与内存分配 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -533,7 +657,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -544,7 +668,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -555,7 +679,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -604,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java语言基本组成"><span class="nav-number">1.</span> <span class="nav-text">Java语言基本组成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">1.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标识符"><span class="nav-number">1.2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量和变量"><span class="nav-number">1.4.</span> <span class="nav-text">常量和变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术运算符"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#赋值运算符"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较运算符"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位运算符"><span class="nav-number">1.5.0.5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三元运算符"><span class="nav-number">1.5.0.6.</span> <span class="nav-text">三元运算符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语句"><span class="nav-number">1.6.</span> <span class="nav-text">语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.7.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.8.</span> <span class="nav-text">数组</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java语言基本组成"><span class="nav-number">1.</span> <span class="nav-text">Java语言基本组成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字"><span class="nav-number">1.1.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标识符"><span class="nav-number">1.2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量和变量"><span class="nav-number">1.4.</span> <span class="nav-text">常量和变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术运算符"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转义字符"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">转义字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#赋值运算符"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较运算符"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.5.0.5.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位运算符"><span class="nav-number">1.5.0.6.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三元运算符"><span class="nav-number">1.5.0.7.</span> <span class="nav-text">三元运算符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语句：程序流程控制"><span class="nav-number">1.6.</span> <span class="nav-text">语句：程序流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#判断结构：-if语句"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">判断结构： if语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择结构：switch-语句"><span class="nav-number">1.6.0.2.</span> <span class="nav-text">选择结构：switch 语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#循环结构：while，do-while，for语句"><span class="nav-number">1.6.0.3.</span> <span class="nav-text">循环结构：while，do while，for语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他流程控制语句：break（跳出），continue（继续）"><span class="nav-number">1.6.0.4.</span> <span class="nav-text">其他流程控制语句：break（跳出），continue（继续）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.7.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的定义"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">函数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的重载"><span class="nav-number">1.7.0.2.</span> <span class="nav-text">函数的重载</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.8.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的定义"><span class="nav-number">1.8.0.1.</span> <span class="nav-text">数组的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的内存分配及特点"><span class="nav-number">1.8.0.2.</span> <span class="nav-text">数组的内存分配及特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组操作常见问题"><span class="nav-number">1.8.0.3.</span> <span class="nav-text">数组操作常见问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的常见操作"><span class="nav-number">1.8.0.4.</span> <span class="nav-text">数组的常见操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维数组"><span class="nav-number">1.8.0.5.</span> <span class="nav-text">二维数组</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

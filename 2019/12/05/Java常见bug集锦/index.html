@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -79,15 +86,15 @@
 
 
 
-<meta name="description" content="找不到文件:路径错误或文件名错误1javac: 找不到文件: 1234.java2用法: javac &amp;lt;options&amp;gt; &amp;lt;source files&amp;gt;3-help 用于列出可能的选项">
+<meta name="description" content="Keywords： bug">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java常见bug集锦">
+<meta property="og:title" content="Java笔记——常见bug集锦">
 <meta property="og:url" content="http:&#x2F;&#x2F;xenaliu.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;Java%E5%B8%B8%E8%A7%81bug%E9%9B%86%E9%94%A6&#x2F;index.html">
 <meta property="og:site_name" content="Xena&#39;s Blog">
-<meta property="og:description" content="找不到文件:路径错误或文件名错误1javac: 找不到文件: 1234.java2用法: javac &amp;lt;options&amp;gt; &amp;lt;source files&amp;gt;3-help 用于列出可能的选项">
+<meta property="og:description" content="Keywords： bug">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-06T05:30:04.702Z">
+<meta property="og:updated_time" content="2019-12-08T12:06:57.580Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -124,7 +131,7 @@
 
 
 
-  <title>Java常见bug集锦 | Xena's Blog</title>
+  <title>Java笔记——常见bug集锦 | Xena's Blog</title>
   
 
 
@@ -268,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java常见bug集锦</h1>
+          <h1 class="post-title" itemprop="name headline">Java笔记——常见bug集锦</h1>
         
 
         <div class="post-meta">
@@ -351,19 +358,29 @@
       
 
       
-        <ol>
-<li>找不到文件:路径错误或文件名错误<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">javac: 找不到文件: <span class="number">1234</span>.java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">用法: javac <span class="symbol">&lt;options&gt;</span> &lt;<span class="keyword">source</span> <span class="keyword">files</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">-<span class="keyword">help</span> 用于列出可能的选项</span></pre></td></tr></table></figure>
-
-</li>
-</ol>
+        <p><strong>Keywords：</strong> bug</p>
 <a id="more"></a>
 
-<ol start="2">
+<h1 id="组成成分"><a href="#组成成分" class="headerlink" title="组成成分"></a>组成成分</h1><ol>
+<li><p>找不到文件:路径错误或文件名错误</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">javac: 找不到文件: <span class="number">1234</span>.java</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">用法: javac <span class="symbol">&lt;options&gt;</span> &lt;<span class="keyword">source</span> <span class="keyword">files</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">-<span class="keyword">help</span> 用于列出可能的选项</span></pre></td></tr></table></figure>
+</li>
 <li><p>找不到或无法加载主类: jvm没有找到要运行的类</p>
 </li>
 <li><p>在类Demo中找不到主方法</p>
 <figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Error: Main <span class="function"><span class="keyword">method</span> <span class="title">not</span> <span class="title">found</span> <span class="title">in</span> <span class="title">the</span> <span class="title">file</span>, <span class="title">please</span> <span class="title">define</span> <span class="title">the</span> <span class="title">main</span> <span class="title">method</span> <span class="title">as</span>:</span> <span class="keyword">public</span> <span class="keyword">static</span> void main(String[] args)</span></pre></td></tr></table></figure>
 <p>因为一个程序的执行需要一个起始点或者入口，所以在Demo类中的加入<code>public static void main(String[] args){}</code></p>
+</li>
+</ol>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
+<li><p>数组脚标越界异常(ArrayIndexOutOfBoundsException)：访问到了数组中的不存在的脚标时发生。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System.out.println(arr[<span class="number">3</span>]);</span></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">java</span><span class="selector-class">.lang</span><span class="selector-class">.ArrayIndexOutOfBoundsException</span>: 3</span></pre></td></tr></table></figure>
+</li>
+<li><p>空指针异常(NullPointerException)：arr引用没有指向实体，却在操作实体中的元素时发生。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System.out.println(arr[<span class="number">0</span>]);</span></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">java</span><span class="selector-class">.lang</span><span class="selector-class">.NullPointerException</span></span></pre></td></tr></table></figure>
+
 </li>
 </ol>
 
@@ -460,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -480,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -491,7 +517,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -502,7 +528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -541,6 +567,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#组成成分"><span class="nav-number">1.</span> <span class="nav-text">组成成分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
