@@ -97,7 +97,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;Java%E4%B8%AD%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB%E5%9B%BE">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;KeySet%E5%9B%BE%E8%A7%A3.bmp">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;entrySet%E5%9B%BE%E8%A7%A3.bmp">
-<meta property="og:updated_time" content="2019-12-23T10:52:53.890Z">
+<meta property="og:updated_time" content="2020-01-06T04:25:42.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;Java%E4%B8%AD%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB%E5%9B%BE">
 
@@ -427,7 +427,7 @@
 <li>集合中不可以存储基本数值。JDK1.5以后可以写作<code>coll.add(3);</code>，但是存储的还是对象（基本数据类型包装类对象） <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">coll.add(<span class="number">3</span>);<span class="comment">//自动装箱</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">coll.add(Integer.valueOf(<span class="number">3</span>));</span></pre></td></tr></table></figure></li>
 <li>集合中存储时数据被提升为<code>Object</code>类型，需要使用元素的特有方法时需要向下转型</li>
 </ol>
-<p><strong>Collection的实现接口：</strong><br><code>Collection</code><br>    |–<code>List</code>：有序(存入和取出的顺序一致),元素都有索引(角标)，元素可以重复。<br>    |–<code>Set</code>：元素不能重复,无序。</p>
+<p><strong>Collection的实现接口：</strong><br><code>Collection</code><br>&ensp;&ensp;|–<code>List</code>：有序(存入和取出的顺序一致),元素都有索引(角标)，元素可以重复。<br>&ensp;&ensp;|–<code>Set</code>：元素不能重复,无序。</p>
 <h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><p>特有的常见方法：有一个共性特点就是都可以操作角标。<br><code>list</code>集合可以完成对元素的增删改查。</p>
 <h5 id="List的常见方法："><a href="#List的常见方法：" class="headerlink" title="List的常见方法："></a>List的常见方法：</h5><ol>
 <li><p>添加</p>
@@ -451,7 +451,7 @@
 </ul>
 </li>
 </ol>
-<h5 id="List的实现类"><a href="#List的实现类" class="headerlink" title="List的实现类:"></a><code>List</code>的实现类:</h5><p><code>List</code>：<br>    |–<code>Vector</code>:内部是数组数据结构，是同步的。增删，查询都很慢！<br>    |–<code>ArrayList</code>:内部是数组数据结构，是不同步的。替代了Vector。长度可变（原理是创建新数组+复制数组），查询的速度快，增删较慢。<br>    |–<code>LinkedList</code>:内部是链表数据结构，是不同步的。增删元素的速度很快，查询较慢。可用于实现堆栈（先进后出，First in Last out, FILO）和队列（先进先出，First in First out, FIFO）。</p>
+<h5 id="List的实现类"><a href="#List的实现类" class="headerlink" title="List的实现类:"></a><code>List</code>的实现类:</h5><p><code>List</code>：<br>&ensp;&ensp;|–<code>Vector</code>:内部是数组数据结构，是同步的。增删，查询都很慢！<br>&ensp;&ensp;|–<code>ArrayList</code>:内部是数组数据结构，是不同步的。替代了Vector。长度可变（原理是创建新数组+复制数组），查询的速度快，增删较慢。<br>&ensp;&ensp;|–<code>LinkedList</code>:内部是链表数据结构，是不同步的。增删元素的速度很快，查询较慢。可用于实现堆栈（先进后出，First in Last out, FILO）和队列（先进先出，First in First out, FIFO）。</p>
 <p>开发中一般选择<code>ArrayList</code>，因为开发中往往查询操作多于增删操作。</p>
 <p><strong>面试题：</strong></p>
 <blockquote>
@@ -461,7 +461,7 @@
 <p>去除List集合中的重复元素(<code>/day17e/src/cn/itcast/p3/arraylist/test/ArrayListTest2.java</code>)</p>
 </blockquote>
 <h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><p>元素不可以重复，是无序。<br><code>Set</code>接口中的方法和<code>Collection</code>一致。</p>
-<p><code>Set</code><br>    |–<code>HashSet</code>：内部数据结构是哈希表，是不同步的。<br>    |–<code>TreeSet</code>：可以对Set集合中的元素进行排序，使用的是二叉树结构，是不同步的。 </p>
+<p><code>Set</code><br>&ensp;&ensp;|–<code>HashSet</code>：内部数据结构是哈希表，是不同步的。<br>&ensp;&ensp;|–<code>TreeSet</code>：可以对Set集合中的元素进行排序，使用的是二叉树结构，是不同步的。 </p>
 <h5 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h5><p><strong>哈希表：</strong><br>数组中存储的都是元素（与哈希值有对应关系），该数组称为哈希表。哈希表查询速度比数组快。重复元素存不进去，保证元素唯一性。</p>
 <p><strong>哈希冲突：</strong><br>元素的哈希值(<code>hashCode</code>方法结果)一致时，称为出现哈希冲突，这时会再次判断元素的内容是否相同(<code>equals</code>方法)</p>
 <p><strong>通过对象的<code>hashCode</code>和<code>equals</code>方法来保证对象一致性：</strong></p>
@@ -478,8 +478,8 @@
 
 <p><strong>传统<code>for</code>循环和增强<code>for</code>循环的区别：</strong><br>增强<code>for</code>循环必须有被遍历的目标，而该目标只能是<code>Collection</code>对象或数组<br>建议：遍历数组时，如果仅为遍历，可以使用增强<code>for</code>循环，如果要对数组的元素进行操作，使用传统<code>for</code>循环可以通过角标操作。</p>
 <p><strong>枚举Enumeration</strong><br>与<code>Tterator</code>功能相同，但只能用于<code>Vector</code>容器。已被淘汰，名称太长，郁郁而终= =。(<code>/day18_my/src/cn/itcast/enumeration/EnumerationDemo.java</code>)</p>
-<h4 id="总结：看集合的小技巧"><a href="#总结：看集合的小技巧" class="headerlink" title="总结：看集合的小技巧"></a>总结：看集合的小技巧</h4><p>集合分体系：<code>List</code> <code>Set</code><br>子类对象的后缀名是所属体系名，前缀名是数据结构名称。<br><code>List</code>：新出的子类都是以<code>List</code>结尾的，通常都是非同步的<br>|–<code>ArrayList</code>:看到<code>array</code>，就知道是数组，查询速度快<br>|–<code>LinkedList</code>：看到<code>linked</code>，就知道是链表，增删速度快</p>
-<p><code>Set</code>：<br>|–<code>HashSet</code>：看到<code>hash</code>，就知道是哈希表，查询速度更快，并想到元素唯一，通过<code>HashCode()</code>、<code>equals()</code>方法保证唯一性<br>&ensp;&ensp;|–<code>LinkedHashSet</code><br>|–<code>TreeSet</code>：看到<code>Tree</code>，就知道是二叉树，可以排序，排序想到<code>Comparable</code>-<code>compareTo()</code>、<code>Comparator</code>-<code>compare()</code>方法</p>
+<h4 id="总结：看集合的小技巧"><a href="#总结：看集合的小技巧" class="headerlink" title="总结：看集合的小技巧"></a>总结：看集合的小技巧</h4><p>集合分体系：<code>List</code> <code>Set</code><br>子类对象的后缀名是所属体系名，前缀名是数据结构名称。<br><strong><code>List</code>：</strong> 新出的子类都是以<code>List</code>结尾的，通常都是非同步的<br>|–<code>ArrayList</code>:看到<code>array</code>，就知道是数组，查询速度快<br>|–<code>LinkedList</code>：看到<code>linked</code>，就知道是链表，增删速度快</p>
+<p><strong><code>Set</code>：</strong><br>&ensp;&ensp;|–<code>HashSet</code>：看到<code>hash</code>，就知道是哈希表，查询速度更快，并想到元素唯一，通过<code>HashCode()</code>、<code>equals()</code>方法保证唯一性<br>&ensp;&ensp;&ensp;&ensp;|–<code>LinkedHashSet</code><br>&ensp;&ensp;|–<code>TreeSet</code>：看到<code>Tree</code>，就知道是二叉树，可以排序，排序想到<code>Comparable</code>-<code>compareTo()</code>、<code>Comparator</code>-<code>compare()</code>方法</p>
 <h3 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h3><h4 id="Map的概述"><a href="#Map的概述" class="headerlink" title="Map的概述"></a>Map的概述</h4><ul>
 <li><code>Map</code>一次添加一对元素，<code>Collection</code>一次添加一个元素</li>
 <li><code>Map</code>也称为双列集合，<code>Collection</code>集合称为单列集合</li>
@@ -736,7 +736,7 @@
         <div class="widget-wrap">
             <div id="myCanvasContainer" class="widget tagcloud">
                 <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%AA%9B/" rel="tag">程序媛</a><span class="tag-list-count">1</span></li></ul>
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%AA%9B/" rel="tag">程序媛</a><span class="tag-list-count">1</span></li></ul>
                 </canvas>
             </div>
         </div>
@@ -752,7 +752,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

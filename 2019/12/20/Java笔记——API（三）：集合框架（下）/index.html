@@ -86,16 +86,18 @@
 
 
 
-<meta name="description" content="Keywords： 泛型、">
+<meta name="description" content="Keywords： 泛型、Collections工具类、Arrays工具类、可变参数、静态导入、System类、Math类、Date&amp;amp;DateFormat&amp;amp;Calendar类">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java笔记——API（三）：集合框架（下）">
 <meta property="og:url" content="http:&#x2F;&#x2F;xenaliu.com&#x2F;2019&#x2F;12&#x2F;20&#x2F;Java%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94API%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%EF%BC%88%E4%B8%8B%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="Xena&#39;s Blog">
-<meta property="og:description" content="Keywords： 泛型、">
+<meta property="og:description" content="Keywords： 泛型、Collections工具类、Arrays工具类、可变参数、静态导入、System类、Math类、Date&amp;amp;DateFormat&amp;amp;Calendar类">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-23T11:05:18.137Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;getProperties%E9%94%AE%E5%80%BC%E5%AF%B9%E5%BA%94%E5%88%97%E8%A1%A8.png">
+<meta property="og:updated_time" content="2020-01-02T12:16:22.537Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;XenaLiu&#x2F;PicGo&#x2F;getProperties%E9%94%AE%E5%80%BC%E5%AF%B9%E5%BA%94%E5%88%97%E8%A1%A8.png">
 
 
 
@@ -388,7 +390,7 @@
       
 
       
-        <p><strong>Keywords：</strong> 泛型、</p>
+        <p><strong>Keywords：</strong> 泛型、<code>Collections</code>工具类、<code>Arrays</code>工具类、可变参数、静态导入、<code>System</code>类、<code>Math</code>类、<code>Date&amp;DateFormat&amp;Calendar</code>类</p>
 <a id="more"></a>
 
 <h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h2 id="泛型的概述"><a href="#泛型的概述" class="headerlink" title="泛型的概述"></a>泛型的概述</h2><p><strong>问题：</strong> 什么类型的元素都可以往集合中存储，导致取出时，如果出现强转就会引发运行时<code>ClassCastException</code>。能不能再创建集合时，就明确容器中元素的类型，如同数组一样。<br><strong>目的：</strong> 让集合使用更安全<br><strong>解决方案：</strong> 泛型，创建集合时，直接在集合上明确要存储的元素的类型，只要不是指定的类型对象，编译器检查会报错。这样就将运行时的问题转移到编译时期。</p>
@@ -438,6 +440,30 @@
 <p>注意事项：可变参数一定要定义再参数列表的最后</p>
 <h1 id="静态导入"><a href="#静态导入" class="headerlink" title="静态导入"></a>静态导入</h1><p>导入的是指定类中的静态成员(<code>/day20_my/src/cn/itcast/staticImport/StaticImportDemo.java</code>)</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.util.Collections.*;</span></pre></td></tr></table></figure>
+
+<h1 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h1><ol>
+<li>不需要实例化，都是静态的属性和方法</li>
+<li><code>out</code>对应标准输出流，默认显示器</li>
+<li><code>in</code>属性对应键盘</li>
+</ol>
+<p><strong>常见方法：</strong> (<code>/day20e/src/cn/itcast/p1/otherapi/SystemDemo.java</code>)</p>
+<ol>
+<li><p>获取当前时间的毫秒值，可以计算程序运行时间：结束时间-开始时间</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="title">currentTimeMillis</span><span class="params">()</span></span>;</span></pre></td></tr></table></figure>
+</li>
+<li><p>获取系统属性集及指定信息(<code>/day20e/系统信息.txt</code>)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Properties prop = System.getProperties();<span class="comment">//获取系统属性集</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Set&lt;String&gt; keySet = prop.stringPropertyNames();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String key:keySet)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    String value = prop.getProperty(key);<span class="comment">//通过键获取值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    syso(key + <span class="string">"::::"</span> + value);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">Properties p = System.getProperty(<span class="string">"os.name"</span>);<span class="comment">//获取指定信息，如：操作系统Windows 10</span></span></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/XenaLiu/PicGo/getProperties%E9%94%AE%E5%80%BC%E5%AF%B9%E5%BA%94%E5%88%97%E8%A1%A8.png" alt="getProperties键值对应列表"></p>
+</li>
+<li><p>获取系统中的行分隔符。这样该程序在移植时很方便</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//写法一：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello"</span>+System.getProperty(<span class="string">"line.separator"</span>)+<span class="string">"XenaLiu"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写法二：</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String LINE_SEPARATOR = System.getProperty(<span class="string">"line.separator"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello"</span>+LINE_SEPARATOR+<span class="string">"world"</span>);</span></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h1><p>提供了操作数学运算的方法，都是静态的。(<code>/day20e/src/cn/itcast/p1/otherapi/MathDemo.java</code>)</p>
+<p><strong>常用方法：</strong><br><code>ceil()</code>:返回大于参数的最小整数。<br><code>floor()</code>:返回小于参数的最大整数。<br><code>round()</code>:返回四舍五入的整数。<br><code>pow(a,b)</code>:a的b次方。<br><code>random()</code>:返回一个double值为正号，大于等于0.0，小于1.0。返回的值是从该范围（大约）均匀分布而伪随机选择的。</p>
+<h1 id="Date-amp-DateFormat-amp-Calendar类"><a href="#Date-amp-DateFormat-amp-Calendar类" class="headerlink" title="Date&amp;DateFormat&amp;Calendar类"></a>Date&amp;DateFormat&amp;Calendar类</h1><p>(<code>/day20e/src/cn/itcast/p1/otherapi/DateDemo.java</code>)<br>(<code>/day20e/src/cn/itcast/p1/otherapi/DateDemo2.java</code>)<br>(<code>/day20e/src/cn/itcast/p1/otherapi/test/DateTest.java</code>)<br>(<code>/day20e/src/cn/itcast/p1/otherapi/test/DateTest2.java</code>)</p>
+
       
     </div>
     
@@ -486,6 +512,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/24/Java%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94IO%E6%B5%81/" rel="prev" title="Java笔记——IO流">
+                Java笔记——IO流 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -640,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-number">1.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型的概述"><span class="nav-number">1.1.</span> <span class="nav-text">泛型的概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型的应用"><span class="nav-number">1.2.</span> <span class="nav-text">泛型的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义泛型类"><span class="nav-number">1.2.1.</span> <span class="nav-text">定义泛型类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义泛型方法"><span class="nav-number">1.2.2.</span> <span class="nav-text">定义泛型方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义泛型接口"><span class="nav-number">1.2.3.</span> <span class="nav-text">定义泛型接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通配符"><span class="nav-number">1.2.4.</span> <span class="nav-text">通配符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通配符在api中的使用"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">通配符在api中的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型的限定"><span class="nav-number">1.2.5.</span> <span class="nav-text">泛型的限定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的限定在api中的使用"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">泛型的限定在api中的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用细节"><span class="nav-number">1.2.6.</span> <span class="nav-text">使用细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例"><span class="nav-number">1.2.7.</span> <span class="nav-text">案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collections工具类"><span class="nav-number">2.</span> <span class="nav-text">Collections工具类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays工具类"><span class="nav-number">3.</span> <span class="nav-text">Arrays工具类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可变参数"><span class="nav-number">4.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态导入"><span class="nav-number">5.</span> <span class="nav-text">静态导入</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-number">1.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型的概述"><span class="nav-number">1.1.</span> <span class="nav-text">泛型的概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型的应用"><span class="nav-number">1.2.</span> <span class="nav-text">泛型的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义泛型类"><span class="nav-number">1.2.1.</span> <span class="nav-text">定义泛型类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义泛型方法"><span class="nav-number">1.2.2.</span> <span class="nav-text">定义泛型方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义泛型接口"><span class="nav-number">1.2.3.</span> <span class="nav-text">定义泛型接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通配符"><span class="nav-number">1.2.4.</span> <span class="nav-text">通配符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通配符在api中的使用"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">通配符在api中的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型的限定"><span class="nav-number">1.2.5.</span> <span class="nav-text">泛型的限定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的限定在api中的使用"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">泛型的限定在api中的使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用细节"><span class="nav-number">1.2.6.</span> <span class="nav-text">使用细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例"><span class="nav-number">1.2.7.</span> <span class="nav-text">案例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collections工具类"><span class="nav-number">2.</span> <span class="nav-text">Collections工具类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arrays工具类"><span class="nav-number">3.</span> <span class="nav-text">Arrays工具类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可变参数"><span class="nav-number">4.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态导入"><span class="nav-number">5.</span> <span class="nav-text">静态导入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#System类"><span class="nav-number">6.</span> <span class="nav-text">System类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Math类"><span class="nav-number">7.</span> <span class="nav-text">Math类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Date-amp-DateFormat-amp-Calendar类"><span class="nav-number">8.</span> <span class="nav-text">Date&amp;DateFormat&amp;Calendar类</span></a></li></ol></div>
             
 
           </div>
@@ -663,7 +693,7 @@
         <div class="widget-wrap">
             <div id="myCanvasContainer" class="widget tagcloud">
                 <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%AA%9B/" rel="tag">程序媛</a><span class="tag-list-count">1</span></li></ul>
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F%E5%AA%9B/" rel="tag">程序媛</a><span class="tag-list-count">1</span></li></ul>
                 </canvas>
             </div>
         </div>
@@ -679,7 +709,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
